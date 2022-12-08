@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sending you to the google translate URL</title>
+
+        <meta name="referrer" content="no-referrer" />
+        <link rel="dns-prefetch" href="https://translate.google.com/" />
+        <link rel="preconnect" href="https://translate.google.com/" crossorigin />
+    </head>
+    <body>
+        <script>
+            // Parameters that can be given in the url are text and url
+            // Give only one, in the format vishalnandagopal.com/t.html?url="https://example.com"
+            const site_url_string = new URL(window.location).searchParams.get("url");
+            const text = new URL(window.location).searchParams.get("text");
+            if (site_url_string) {
+                site_url = new URL(site_url_string);
+                site_domain = site_url.host;
+                site_path = site_url.pathname;
+                google_translate_url = "https://" + site_domain.split(".").join("-") + ".translate.goog" + site_path + "?_x_tr_sl=auto&_x_tr_tl=en&_x_tr_hl=en-US&_x_tr_pto=wapp";
+            } else if (text) {
+                google_translate_url = "https://translate.google.com/?sl=auto&tl=en&text=" + text;
+            }
+            window.location.replace(google_translate_url);
+        </script>
+        <!--i.e https://www.lequipe.fr/Football/Article/Face-a-l-ol-monaco-doit-effacer-le-doute-a-domicile/1353433 to https://www-lequipe-fr.translate.goog/Football/Article/Face-a-l-ol-monaco-doit-effacer-le-doute-a-domicile/1353433?_x_tr_sl=auto&_x_tr_tl=en&_x_tr_hl=en-US&_x_tr_pto=wapp-->
+    </body>
+</html>
