@@ -3,6 +3,10 @@ assets/fonts
 
 *.vscode/
 
+.github/workflows/
+*.py
+
+
 .DS_STORE
 /pip_test
 /_python_build

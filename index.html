@@ -5,13 +5,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="description" content="Vishal's homepage" />
         <meta name="referrer" content="strict-origin-when-cross-origin" />
-        <link rel="canonical" href="https://vishalnandagopal.com" />
+        <link rel="canonical" href="https://vishalnandagopal.com/" />
 
         <title>Home - vishalnandagopal.com</title>
 
         <!-- Open Graph -->
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://vishalnandagopal.com" />
+        <meta property="og:url" content="https://vishalnandagopal.com/" />
         <meta property="og:title" content="Home - vishalnandagopal.com" />
 
         <!-- Stylesheets -->
@@ -85,7 +85,7 @@
 
         <!-- Main body begins -->
         <main>
-            <p>20 year old from Hyderabad, India.</p>
+            <p><span id="age">20</span> year old from Hyderabad, India.</p>
             <p>A site to hang text I have no other place for.</p>
         </main>
 
@@ -96,5 +96,9 @@
             <!-- <p class="curly-name">Vishal</p> -->
         </footer>
         <script defer src="/assets/js/main.js"></script>
+        <script>
+        age_span = document.getElementById("age");
+        age_span.innerText = Math.floor(((new Date()) - (new Date(2002,08)))/(60*60*24*365*1000))
+        </script>
     </body>
 </html>

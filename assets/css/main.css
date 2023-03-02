@@ -127,6 +127,10 @@ main > ul > li {
     margin: 0.5rem;
 }
 
+.center{
+    text-align: center;
+}
+
 footer {
     text-align: center;
     font-size: 0.9rem;
@@ -155,4 +159,9 @@ footer a {
     .active-section {
         border-color: black;
     }
+}
+
+.smol{
+    font-size: 0.9rem;
+    font-family: monospace;
 }
