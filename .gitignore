@@ -5,6 +5,8 @@ assets/fonts
 
 .github/workflows/
 *.py
+*.exe
+testing
 
 
 .DS_STORE
